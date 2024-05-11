@@ -34,6 +34,66 @@ curl --location 'https://api.apijobs.dev/v1/job/search' \
   --data '{
     "q" : "Reactjs"
   }'
+```
+
+### PHP
+```php
+<?php
+$url = 'https://api.apijobs.dev/v1/job/search';
+$apiKey = 'myapikey';
+$data = array('q' => 'PHP Developer');
+
+$options = array(
+    'http' => array(
+        'header'  => "Content-type: application/json\r\n" .
+                     "apikey: $apiKey\r\n",
+        'method'  => 'POST',
+        'content' => json_encode($data)
+    )
+);
+$context  = stream_context_create($options);
+$result = file_get_contents($url, false, $context);
+if ($result === FALSE) { /* Handle error */ }
+
+echo $result;
+?>
+```
+### C#
+```
+using System;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+
+class APIJobs
+{
+    static async Task Main()
+    {
+        var url = "https://api.apijobs.dev/v1/job/search";
+        var apiKey = "myapikey";
+        var data = "{\"q\":\"C# Developer\"}";
+
+        using (var client = new HttpClient())
+        {
+            client.DefaultRequestHeaders.Add("apikey", apiKey);
+            client.DefaultRequestHeaders.Add("Content-Type", "application/json");
+
+            var content = new StringContent(data, Encoding.UTF8, "application/json");
+            var response = await client.PostAsync(url, content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                string result = await response.Content.ReadAsStringAsync();
+                Console.WriteLine(result);
+            }
+            else
+            {
+                Console.WriteLine($"Failed to send request: {response.StatusCode}");
+            }
+        }
+    }
+}
+```
 
 ### Python
 ```python
