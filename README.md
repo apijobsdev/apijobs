@@ -3,6 +3,15 @@
 
 APIJobs offers a developer-friendly and enterprise-grade job listing API designed for job boards, comprehensive search functionalities, and deep insights into the job market. It's structured to provide relevant and real-time data, empowering developers to build robust job-related applications with ease.
 
+In order to the api, you need to create a (free) account : [Here](https://app.apijobs.dev/auth/signup) and claim your api.
+
+The full documentation is available [Here](https://doc.apijobs.dev)
+
+Community access: [Slack](https://join.slack.com/t/apijobs/shared_invite/zt-2du4jo0xx-yoFy9SIz9WGgJIk1s6gAQg)
+
+
+
+
 ## Features
 
 - **Search Functionality:** Tailor your job search by industry, location, or specific skills to find exactly what you're looking for.
