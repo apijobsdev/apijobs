@@ -1,5 +1,5 @@
 # APIJobs
-## The Best Job Search API
+## The Job Search API
 
 APIJobs is a developer-friendly and enterprise-grade job listing API tailored for job boards. It offers comprehensive search functionalities and deep insights into the job market. Our API is designed to deliver relevant and real-time data, empowering developers to easily build and enhance robust job-related applications.
 
